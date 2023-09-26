@@ -829,7 +829,7 @@ transition: .5s ease;
 .footer-plus{
   display: flex;
   align-items: center;
-  height: 15vh;
+  height: 10vh;
 }
 .footer-plus h5,span,hr{
   color:#d9d6da ;
