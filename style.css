@@ -480,9 +480,6 @@ color: #ffffff;
   /* z-index: 0; */
 background: #bb0805;
 }
-.all-categories-menu{
-display: none;
-}
 .nav3 .category:hover{
 background: #af0704;
 }
@@ -1014,29 +1011,6 @@ margin-top: -3rem !important;
 .nav1-phone .currancy-options{
 margin-left: 20vw !important;
 }
-/* all categories menu */
-.hamburger-menu .all-categories-icon img{
-background: #808080;
-height: .6rem;
-transform: rotate(90deg); 
-margin-right: 12rem;
-
-}
-.all-categories-menu {
-z-index: 1111111;
-margin-left: 8rem !important;
-display: none;
-height: 19rem !important;
-
-}
-.all-categories-menu img{
-height: .8rem !important;
-
-}
-.all-categories-menu ul li {
-font-size: .7rem !important;
-}
-/* //all categories menu */
 .login-modal-open{
 width: 100vw !important;
 }
@@ -1296,43 +1270,6 @@ border-bottom:.011rem solid black;
 .smallsearch input{
   transform: translateX(-1rem);
 }
-  /* all categories menu */
-  .hamburger-menu .all-categories-icon img{
-    background: #808080;
-    height: .6rem;
-    transform: rotate(90deg); 
-    margin-right: 12rem;
-    
-  }
-  .all-categories-menu {
-    z-index: 1111111;
-    margin-left: 12rem;
-    display: none;
-    height: 22rem;
-    overflow: auto;
-    margin-top: 0rem;
-    background: #f5e2e2;
- 
-  }
-  .all-categories-menu img{
-    height: .9rem;
-    /* margin-right: .5rem; */
-    transform: translateX(-.5rem);
-
-  }
-  .all-categories-menu::-webkit-scrollbar {
-    width: 0;
-  }
-  .all-categories-menu a {
-    color: rgb(0, 0, 0);
-  }
-  .all-categories-menu ul li {
-    padding: 0.4rem 0rem;
-    margin-top: 1rem;
-    font-size: .8rem;
-    transition: 0.4s ease;
-  }
-  /* //all categories menu */
 /* Login modal */
 #login-modal-open{
 width: 100vw;
@@ -1712,37 +1649,6 @@ padding:.5rem 0rem .5rem 3rem;
 .hamburger-menu ul li:hover{
 background:rgb(214, 197, 212);
 }
-/* all categories menu */
-.all-categories-menu {
-  z-index: 1111111;
-  margin-left: 20rem;
-  /* display: none; */
-  height: 19rem;
-  overflow: auto;
-  margin-top: -2rem;
-  background: #f5e2e2;
-
-}
-.all-categories-menu img{
-  height: 1rem;
-  margin-right: .5rem;
-}
-.all-categories-menu::-webkit-scrollbar {
-  width: 0;
-}
-.all-categories-menu a {
-  color: rgb(0, 0, 0);
-}
-.all-categories-menu ul li {
-  padding: 0.4rem 0rem;
-  margin-top: 1rem;
-  transition: 0.4s ease;
-}
-.all-categories-menu ul li:hover {
-  background: rgb(197, 195, 195);
-  margin-left: 0.2rem;
-}
-/* //all categories menu */
 /* Login modal */
 #login-modal-open{
   width: 100vw;

@@ -340,51 +340,11 @@
                 <li><a href="">Blogs</a></li>
                 <li><a href="">All brands</a></li>
                 <!-- <li><a href="">All Categories</li> -->
-                <li class="d-flex justify-content-between"><a href="">All categories</a>
-                    <span class="all-categories-icon"><img src="./expand_less_white.svg" alt=""></span>
+                <li><a href="">All categories</a>
                 <li><a href="">All sellers</a></li>
                 <li><a href="">Coupons</a></li>
                 <li><a href="">Today deals</a></li>
             </ul>
-        </div>
-        <div class="all-categories position-relative">
-            <div class="position-absolute all-categories-menu">
-                <ul>
-
-                    <li onmouseover="categoryListOver()" onmouseout="categoryListOut()"><a href=""><img
-                                src="./women cloth.webp" alt="">Women clothing &
-                            fashion</a></li>
-                    <li onmouseover="categoryList2Over()" onmouseout="categoryList2Out()"><a href=""><img
-                                src="./men cloth.webp" alt=""> Men clothing
-                            and fashion</a></li>
-                    <li onmouseover="categoryList3Over()" onmouseout="categoryList3Out()"><a href=""><img
-                                src="./compute acceseries.webp" alt="">Computer
-                            and
-                            accessories</a></li>
-                    <li onmouseover="categoryList4Over()" onmouseout="categoryList4Out()"><a href=""><img
-                                src="./automobile motorcycle.webp" alt="">Automobile &
-                            Motorcycle</a></li>
-                    <li onmouseover="categoryList5Over()" onmouseout="categoryList5Out()"><a href=""><img
-                                src="./kids and toy.webp" alt="">Kids & Toy</a>
-                    </li>
-                    <li onmouseover="categoryList6Over()" onmouseout="categoryList6Out()"><a href=""><img
-                                src="./sports and outdoor.webp" alt="">Sports &
-                            outdoor</a></li>
-                    <li onmouseover="categoryList7Over()" onmouseout="categoryList7Out()"><a href=""><img
-                                src="./jwelery and watches.webp" alt="">Jewelry &
-                            watches</a></li>
-                    <li onmouseover="categoryList8Over()" onmouseout="categoryList8Out()"><a href=""><img
-                                src="./cellphone and tabs.webp" alt="">Cellphones
-                            &
-                            Tabs</a></li>
-                    <li onmouseover="categoryList9Over()" onmouseout="categoryList9Out()"><a href=""><img
-                                src="./beauty health.webp" alt="">Beauty , Health
-                            & Hair</a></li>
-                    <li onmouseover="categoryList10Over()" onmouseout="categoryList10Out()"><a href=""><img
-                                src="./home improvement tools.webp" alt="">Home
-                            Improvements & Tools</a></li>
-                </ul>
-            </div>
         </div>
         <!-- //hamburger menu -->
         <!-- //nav2 tab-->
@@ -2449,14 +2409,17 @@
         // hamburger menu
         let ham_menu = document.querySelector(".hamburger-menu");
         let ham = document.querySelector(".hamburger");
-        let all_categories_menu = document.querySelector('.all-categories-menu')
 
 
         function hamburger_menu() {
             if (ham_menu.style.width === '0%') {
                 ham_menu.style.width = '50%';
-                if(window.innerWidth<=500){
+
+                if(window.innerWidth<=450){
                     ham_menu.style.width = '100%';
+                }
+                else if(window.innerWidth>=450 && window.innerWidth<=768){
+                    ham_menu.style.width = '70%';
 
                 }
             }
@@ -2465,12 +2428,11 @@
             }
         }
         function close_ham() {
-            all_categories_menu.style.display = 'none';
             ham_menu.style.width = '0%';
 
         }
 
-
+  
         // //hamburger menu
         // list scroll
         $(document).ready(function () {
@@ -2523,10 +2485,6 @@
         });
         // //login modal
         // all categories phone
-        $(".all-categories-icon").click(function () {
-            $(".all-categories-menu").toggle();
-        });
-
         // sticky header full width
         window.addEventListener('scroll', function () {
             let nav2 = document.querySelector('.nav2');
