@@ -134,7 +134,7 @@ background: #ffffff;
 box-shadow: 0px 0px 10px 1px;
 width: 15rem;
 margin-left: 7rem;
-z-index: 11;
+z-index: 11z;
 overflow: auto;
 
 }
@@ -322,7 +322,7 @@ color: #ffffff;
 #login-modal-open{
   width: 100vw;
   height: 100%;
-  display: flex;
+  display: none;
 }
 #registration-modal-open{
   display: none;
@@ -724,6 +724,161 @@ margin-left: 2rem;
 font-size: 1.3rem;
 font-weight: 700;
 }
+/* Menu */
+.particles-js{
+width: 100vw;
+height: 200vh;
+position: absolute;
+z-index: -111111111;
+
+}
+.flash-sale{
+height: 100%;
+width: 100vw;
+margin-bottom: 2rem;
+/* position: absolute; */
+}
+.flash-sale a{
+color: #242323;
+}
+.flash-sale .info h3{
+color: #3a3a3a;
+/* font-size: 20px; */
+}
+.flash-sale .info li{
+font-size: 13px;
+}
+/* Flash sale */
+.flash-sale-banner{
+margin-bottom: 2rem;
+overflow: hidden;
+margin-top: -2rem;
+}
+.flash-sale-banner img {
+height: 100%;
+transition: transform 0.5s ease;
+object-fit: cover;
+}
+
+.flash-sale-banner img:hover {
+transform: scale(1.05); /* Increase the size on hover */
+}
+.flash-sale-options{
+gap: 1rem;
+}
+.flash-sale-options .col{
+display: flex;
+align-items: center;
+}
+.flash-sale-height{
+width: 26vw;
+height: 27rem;
+overflow: hidden;
+display: flex;
+align-items: center;
+/* justify-content: center; */
+}
+
+.flash-sale-height img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform .5s ease;
+position: relative;
+
+}
+.flash-sale-height img:hover{
+/* position: relative; */
+transform: scale(1.06);
+}
+.flash-sale .countdown{
+background: #ffffff;
+width: 19vw;
+z-index: 11;
+cursor: pointer;
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 2.9rem;
+margin-top: -15rem;
+height: 6rem;
+}
+.flash-sale .countdown .time{
+display: flex;
+gap: .4rem;
+margin-top:-1rem
+}
+.countdown .days,.hours,.minutes,.second{
+display: flex;
+flex-direction: column;
+align-items: center; 
+justify-content: center;
+height: 4rem;
+width: 4rem;
+border-radius: 50%;
+}
+.countdown input{
+text-align: center;
+background: transparent;
+border: none;
+width: 100%;
+
+}
+.time .circle{
+position: relative;
+width: 70px;
+height: 70px;
+top: -5rem;
+left: 2.3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.countdown svg{
+position: absolute;
+width: 5rem;
+height: 5rem;
+top: 5rem;
+
+right: 1.9rem;
+transform: rotate(270deg);
+
+
+
+}
+.countdown svg circle {
+stroke-width: 2;
+width: 100%;
+height: 100%;
+stroke: rgb(202, 4, 4);
+fill: transparent;
+/* Set the initial stroke dash array and offset */
+stroke-dasharray: 440;
+stroke-dashoffset: 440;
+}
+
+.first-circle{
+width: 62px;
+height: 62px;
+border:1px solid #ebebeb;
+border-radius: 50%;
+position: absolute;
+margin-right: -.2rem;  
+z-index: -2;
+margin-top: 1.2rem;
+/* padding-right: 2rem; */
+
+}
+.countdown span{
+color: #8b8b8b;
+letter-spacing: 2px;
+font-size: .7rem;
+}
+/* //Flash sale */
+
+/* //Menu */
+
 /* footer */
 /* footer text */
 .footer1{
@@ -937,15 +1092,14 @@ background-color: #FFFFFF;
 .fixed-footer ul{
 gap: 2rem;
 margin-top: 1.5rem;
-margin-left: -2rem;
 /* display: flex;justify-content: center; */
 }
 .fixed-footer ul li{
+text-align: center;
 cursor: pointer;
 }
 .fixed-footer ul li svg{
-margin-left: 33%;
-margin-bottom: .5rem;
+/* margin-left: .5rem; */
 }
 .fixed-footer ul li span{
 font-size: .7rem;
@@ -1001,10 +1155,11 @@ padding:.5rem 0rem .5rem .2rem !important;
 }
 /* sticky navbar */
 .sticky-nav-small{
-margin-top: -6rem !important;
+margin-top: -6.2rem !important;
 }
 .sticky-nav-small-alert-400{
-margin-top: -3rem !important;
+margin-top: -3.2rem !important;
+margin-left: 0 !important;
 }
 
 /* //sticky navbar */
@@ -1022,16 +1177,23 @@ width: 100vw !important;
 }
 /* fixed footer */
 .fixed-footer{
-width: 35rem !important;
+margin-right: 0 !important;
+width: 100vw !important;
+text-align: center;
 border-radius: 0px !important;
 }
 .fixed-footer ul{
-gap:8vw !important;
-margin-left: -6vw !important;
+gap:7vw !important;
+margin-left: -9vw !important;
 }
 .fixed-footer ul li span{
 font-size: .59rem !important;
 }
+/* flash sale */
+.flash-sale .countdown{
+width: 18rem !important;
+}
+/* //flash sale */
 }
 /* //fixed footer */
 @media screen and (max-width:558px) and (min-width:400px) {
@@ -1046,6 +1208,11 @@ font-size: .59rem !important;
 .fixed-footer ul li span{
   font-size: .6rem !important;
 }
+/* flash sale */
+.flash-sale .countdown{
+width: 24rem !important;
+}
+/* //flash sale */
 }
 @media screen and (max-width: 769px){
 .nav1{
@@ -1212,7 +1379,7 @@ display: flex;
 align-items: center;
 margin-top: -9rem;
 background: #ffff;
-height: 4rem; 
+height: 5rem; 
 scroll-behavior: smooth;
 transition: .3s ease;
 }
@@ -1407,6 +1574,33 @@ flex-grow: 1;
 width: 100%;
 }
 /* //Login modal */
+
+/* flash sale */
+.flash-sale .info{
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.flash-sale .info ul{
+  margin-right: 1.5rem;
+}
+.flash-sale-height{
+  width: 100vw;
+  height:23rem;
+  justify-content: center;
+}
+.flash-sale-options .col{
+  display: flex;
+  justify-content: center;
+}
+.flash-sale .countdown{
+  width: 30rem;
+  margin-left: 0rem;
+  margin-top: -10.6rem;
+}
+
+/* //flash sale */
 }
 
 @media screen and (max-width: 995px)and (min-width:769px){
@@ -1546,7 +1740,7 @@ display: flex;
 align-items: center;
 margin-top: -10rem;
 background: #ffff;
-height: 4rem; 
+height: 5rem; 
 scroll-behavior: smooth;
 transition: .3s ease;
 }
@@ -1632,7 +1826,7 @@ z-index: 111;
 width: 100vw;
 margin-top: -9.8rem;
 background: #ffff;
-height: 4rem; 
+height: 5rem; 
 scroll-behavior: smooth;
 transition: .3s ease;
 }
@@ -1783,6 +1977,32 @@ background:rgb(214, 197, 212);
   width: 100%;
 }
 /* //Login modal */
+/* flash sale */
+.flash-sale .info{
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.flash-sale .info ul{
+  margin-right: 1.5rem;
+}
+.flash-sale-height{
+  width: 100vw;
+  height:23rem;
+  justify-content: center;
+}
+.flash-sale-options .col{
+  display: flex;
+  justify-content: center;
+}
+.flash-sale .countdown{
+  width: 42rem;
+  margin-left: 0rem;
+  margin-top: -10.6rem;
+}
+
+/* //flash sale */
 }
 
 @media screen and (max-width: 1200px) and (min-width: 995px){
@@ -2040,7 +2260,31 @@ background: #ff6d6d;
 .categories h6 {
 margin-top: 1rem;
 font-size: 15px;
-}}
+}
+/* flash sale */
+.flash-sale-options{
+  display: flex;
+}
+.flash-sale .info ul{
+  margin-right: 1.5rem;
+}
+.flash-sale-height{
+  width: 28rem;
+  height:23rem;
+  justify-content: center;
+}
+.flash-sale-options .col{
+  display: flex;
+  justify-content: center;
+}
+.flash-sale .countdown{
+  width: 26rem;
+  margin-left: 0rem;
+  margin-top: -10.6rem;
+}
+
+/* //flash sale */}
+
 /* //nav3 */
 
 @media screen and (max-width: 1500px) and (min-width: 1200px){
