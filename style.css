@@ -1441,7 +1441,7 @@ border-bottom:.011rem solid black;
 #login-modal-open{
 width: 100vw;
 height: 100%;
-display: flex;
+display: none;
 justify-content: center;
 }
 .login-modal-open{
@@ -1847,7 +1847,7 @@ background:rgb(214, 197, 212);
 #login-modal-open{
   width: 100vw;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 .login-modal-open{
