@@ -323,7 +323,7 @@
                 <ul>
                     <li><a href="">Home</a></li>
                     <li class="flash-sale-link"><a href="">Flash Sale</a></li>
-                    <li><a href="">Blogs</a></li>
+                    <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
                     <li><a href="">All brands</a></li>
                     <!-- <li><a href="">All Categories</li> -->
                     <li><a href="">All categories</a>
@@ -418,7 +418,7 @@
                                 <ul>
                                     <li><a href="">Home</a></li>
                                     <li class="active flash-sale-link"><a href="#">Flash Sale</a></li>
-                                    <li><a href="">Blogs</a></li>
+                                    <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
                                     <li><a href="">All brands</a></li>
                                     <li><a href="">All categories</a></li>
                                     <li><a href="">All sellers</a></li>
@@ -469,7 +469,7 @@
                             <ul>
                                 <li><a href="">Home</a></li>
                                 <li class="active flash-sale-link"><a href="#">Flash Sale</a></li>
-                                <li><a href="">Blogs</a></li>
+                                <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
                                 <li><a href="">All brands</a></li>
                                 <li><a href="">All categories</a></li>
                                 <li><a href="">All sellers</a></li>
@@ -1827,8 +1827,12 @@
                 <!-- //All categories 2 -->
 
                 <!-- Menu -->
-                <div  class="particles-js" id="particles-js"></div>
+                <div  class="particles-js" id="particles-js">
+                    <!-- <canvas class="particles-js-canvas" width="1129" height="1089" style="width: 100%; height: 100%;"></canvas> -->
+            </div>
+                <div class="menu  h-100 w-100" >
                 <div class="flash-sale">
+                    <!-- <div  class="particles-js1" id="particles-js"></div> -->
                     <div class="container ">
                         
                         <div class="row">
@@ -1881,16 +1885,16 @@
             let maxStrokeOffset = 440;
 
             // Animate the stroke dash offset for each section
-            let daysStrokeOffset = maxStrokeOffset - (maxStrokeOffset * d.val()) / 821;
+            let daysStrokeOffset = maxStrokeOffset - (maxStrokeOffset * d.val()) / 845.705;
             dd.animate({ 'stroke-dashoffset': daysStrokeOffset }, 1000);
 
-            let hoursStrokeOffset = maxStrokeOffset - (maxStrokeOffset * h.val()) / 54;
+            let hoursStrokeOffset = maxStrokeOffset - (maxStrokeOffset * h.val()) / 55.608;
             hh.animate({ 'stroke-dashoffset': hoursStrokeOffset }, 1000);
 
-            let minutesStrokeOffset = maxStrokeOffset - (maxStrokeOffset * m.val()) / 135;
+            let minutesStrokeOffset = maxStrokeOffset - (maxStrokeOffset * m.val()) / 139.02;
             mm.animate({ 'stroke-dashoffset': minutesStrokeOffset }, 1000);
 
-            let secondsStrokeOffset = maxStrokeOffset - (maxStrokeOffset * s.val()) / 135;
+            let secondsStrokeOffset = maxStrokeOffset - (maxStrokeOffset * s.val()) / 139.02;
             ss.animate({ 'stroke-dashoffset': secondsStrokeOffset }, 1000);
         });
     }
@@ -2110,17 +2114,456 @@
                     </div>
                     </div>
                 </div>
+        </div>
+            <!-- <div  class="particles-js" id="particles-js"></div> -->
+            <div class="blog">
+            <div class="blog-filter-category d-xl-none">
+                <div class="mx-4 mt-3"><button>close</button></div>
+            <div class="blog-search d-flex ">
+            <input type="search" name="" id="" placeholder="Search">
+            <label for=""><img src="./blog/search-svgrepo-com.svg" alt=""></label>
+        </div>
+        <div class="blog-category border">
+            <div class="heading"><b>Categories</b></div>
+            <ul>
+                <li>
+                <label for="">
+                    <input type="checkbox" name="" id="" data-name="family">
+                    Family
+                </label></li>
+                <li>
+                    <label for="">
+                    <input type="checkbox" name="" id=""data-name="home">
+                    Home
+                </label>
+            </li>
+                <li><label for="">
+                    <input type="checkbox" name="" id="" data-name="tech">
+                    Tech
+                </label>
+            </li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="style">
+                    Style
+                </label>
+            </li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="on trend">
+                    On Trend
+                </label>
+            </li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="marketing and Promotion">
+                    Marketing and Promotion
+                </label>
+            </li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="online sell">
+                    Online Sell
+                </label></li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="fashion">
+                    Fashion
+                </label></li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="life hacks">
+                    Life Hacks
+                </label></li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="man fashion">
+                    Man Fashion</label></li>
+                <li><label for="">
+                    <input type="checkbox" name="" id=""data-name="new">
+                    new</label></li>
+            </ul>
+        </div></div>
+        <script>
+            $(document).ready(function(){
+                $('.blog .filter').click(function(){
+                    $('.blog .blog-filter-category').show(400)
+                    if(window.innerWidth>=400 &&  window.innerWidth<=558 ){
+                        $('.blog .blog-filter-category').css('width','100vw')
+
+                    }
+                })
+                $('.blog .blog-filter-category button').click(function(){
+                    $('.blog .blog-filter-category').hide(400)
+                })
+            })
+        </script>
+            <div class="blog">
+                
+                    
+                <div class="container">
+                    <div class="row d-flex flex-column-reverse flex-xl-row  ">
+                        
+                        <div class="col-xl-3 col-12 d-block" >
+
+                            <div class="d-none d-xl-block">
+                            <div class="blog-search d-flex d-xl-block">
+                            <input type="search" name="" id="" placeholder="Search">
+                            <label for=""><img src="./blog/search-svgrepo-com.svg" alt=""></label>
+                        </div>
+                        <div class="blog-category border">
+                            <div class="heading"><b>Categories</b></div>
+                            <ul>
+                                <li>
+                                <label for="">
+                                    <input type="checkbox" name="" id="" data-name="family">
+                                    Family
+                                </label></li>
+                                <li>
+                                    <label for="">
+                                    <input type="checkbox" name="" id=""data-name="home">
+                                    Home
+                                </label>
+                            </li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id="" data-name="tech">
+                                    Tech
+                                </label>
+                            </li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="style">
+                                    Style
+                                </label>
+                            </li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="on trend">
+                                    On Trend
+                                </label>
+                            </li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="marketing and Promotion">
+                                    Marketing and Promotion
+                                </label>
+                            </li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="online sell">
+                                    Online Sell
+                                </label></li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="fashion">
+                                    Fashion
+                                </label></li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="life hacks">
+                                    Life Hacks
+                                </label></li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="man fashion">
+                                    Man Fashion</label></li>
+                                <li><label for="">
+                                    <input type="checkbox" name="" id=""data-name="new">
+                                    new</label></li>
+                            </ul>
+                        </div></div>
+                        <div class=" border d-block my-5 p-3">
+                            
+                            <div class="head mb-3 ">
+                                <h6 class="fw-bold">Recent Posts</h6>
+                            </div>
+                            <div class="recent-posts d-xl-block d-flex">
+                            <div class="row recent-post-card ">
+                                <div class="recent-post-card-img col-4">
+                                <img src="./blog/1.webp" alt=""></div>
+                                <div class="recent-post-card-info col">
+                                    <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                    <div class="card-date">Sept 13, 2023</div>
+                                    <div class="card-title">Man Fashion</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/4.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>Effective Self Defense Tips for Women</h6>
+                                    <div class="card-date">Sept 13, 2023</div>
+                                    <div class="card-title">Life Hacks</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/7.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>What’s Trending This Winter Season?</h6>
+                                    <div class="card-date">Sept 11, 2023</div>
+                                    <div class="card-title">Fashion</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/2.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>Stay fashionably chill</h6>
+                                    <div class="card-date">Sept 12, 2023</div>
+                                    <div class="card-title">Style</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/5.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>YouTube for E-Commerce</h6>
+                                    <div class="card-date">Sept 12, 2023</div>
+                                    <div class="card-title">Marketing and Promotion</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/8.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                    <div class="card-date">Sept 11, 2023</div>
+                                    <div class="card-title">On Trend</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/3.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                    <div class="card-date">Sept 12, 2023</div>
+                                    <div class="card-title">Man Fashion</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/6.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>3 must-buy travel items for new parents</h6>
+                                    <div class="card-date">Sept 12, 2023</div>
+                                    <div class="card-title">Family</div>
+                                </div>
+    
+
+                            </div>
+                            <div class="row recent-post-card d-flex">
+                                <div class="col-4 recent-post-card-img">
+                                <img src="./blog/9.webp" alt=""></div>
+                                <div class="col recent-post-card-info">
+                                    <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                    <div class="card-date">Sept 10, 2023</div>
+                                    <div class="card-title">Home</div>
+                                </div>
+    
+
+                            </div>
+                        </div>
+                    </div></div>
+
+                        <div class="col-xl-9 col-12" >
+                            <div class="row mt-5 info">
+                             <div class="col-5 col-xl-6 d-flex justify-content-start  my-3">
+                            <h4 class="fw-bolder text-center">Blogs</h4>
+                        </div>
+                        <div class="col-5 col-xl-6 d-flex justify-content-end">
+                            <ul class="d-flex align-items-center ">
+                                
+                                <li><a href="" class="mx-2">Home/ </a></li>
+                                <li class="fw-bold">"Blog"</li>
+                            </ul></div>
+                                <div class="col-2 d-flex justify-content-end d-xl-none filter"><img src="./filter.svg"></div>
+
+                </div>
+                <div class="blog-cards d-flex">
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/1.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">T-Shirts Every Man Needs in His Wardrobe</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Fashion is for men just as much as it is for women. And whoever says that men can get away with just about any shirt with jeans  ah,they couldnt be more wrong!
+                            </p></div>
+                            <div class="card-date">Sept 13, 2023</div>
+                            <div class="card-title">Man Fashion</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/2.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">Stay fashionably chill</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Summer is over and Milan Fashion Week is just around the corner. It’s time to check out what your favorite influencers are wearing on the runway and out on the streets.
+                            </p></div>
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title">Style</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/3.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">T-Shirts Every Man Needs in His Wardrobe</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Fashion is for men just as much as it is for women. And whoever says that men can get away with just about any shirt with jeans  ah,they couldnt be more wrong!
+                            </p></div>
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title">Man Fashion</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/4.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">Effective Self Defense Tips for Women</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+
+                                The world is not a safe place, especially for our women. Everyday, women from all around the world have to go through unimaginable situations.
+                            </p></div>
+                            <div class="card-date">Sept 13, 2023</div>
+                            <div class="card-title">Life Hacks</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/5.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">YouTube for E-Commerce</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                YouTube is an excellent platform for promoting your e-commerce business, but many stores haven’t capitalized on what it has to offer.
+                            </p></div>
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title">Marketing and Promotion</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/6.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">3 must-buy travel items for new parents</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Whether it's a day outing or a long family holiday, ample preparation always pays off.Besides doing ample research on the transportation
+                            </p></div>
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title">Family</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/7.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">What’s Trending This Winter Season?</h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Winter is THE season for fashion. We think it’s the winter fashion is one of the most stylish and attractive one. It’s got a rather cosy but fancy touch to it that we simply love.
+                            </p></div>
+                            <div class="card-date">Sept 11, 2023</div>
+                            <div class="card-title">Fashion</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/8.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">
+                                Get more with our 10th Anniversary sale guide!
+                            </h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Celebrate our birthday with deals over 50% off, money-saving games, and a trip down memory lane to relive your journey
+                            </p></div>
+                            <div class="card-date">Sept 11, 2023</div>
+                            <div class="card-title">On Trend</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                    <div class="card border">
+                        <div class="card-img">
+                            <img src="./blog/9.webp" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="head">
+                            <h6 class="">
+                            8 smart home devices for a cooler, more intelligent living space        
+                            </h6></div>
+                            <div class="paragraph">
+                            <p title="">
+                                Celebrate our birthday with deals over 50% off, money-saving games, and a trip down memory lane to relive your journey.
+                            </p></div>
+                            <div class="card-date">Sept 10, 2023</div>
+                            <div class="card-title">Home</div>
+                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+                    </div>
+                </div>
+            </div></div>
             <script>
                 $(document).ready(function(){
     $('.flash-sale-link').click(function(){
-        console.log('click');
         $('.flash-sale').css('display', 'block');
         $('#login-modal-open').css('display','none')
     $('#registration-modal-open').css('display','none')
-
+    $('.All-categories2').css('display','none')
+    $('.blog').css('display','none')
     });
 });
+$(document).ready(function(){
+$('.blog-link').click(function(e){
+    e.preventDefault()
+    $('.blog').css('display', 'block');
+    $('.flash-sale').css('display', 'none');
+    $('#login-modal-open').css('display','none')
+    $('.All-categories2').css('display','none')
+$('#registration-modal-open').css('display','none')
+});
+})
 
             </script>
             <div class="blog">
@@ -2709,8 +3152,9 @@ smallSearch.style.transform = 'translateY(-2.5rem)';
 }
 if (window.innerWidth <= 400) {
     const smallSearch = document.querySelector('.smallsearch'); // Assuming smallSearch is an element with this ID
-    if (smallSearch) {
+   
         smallSearch.style.transform = 'translateY(-5rem)';
+        nav2_phone.classList.add('sticky-nav-small');
         smallSearch.style.position='fixed';
         smallSearch.style.marginLeft='0rem';
         
@@ -2721,7 +3165,7 @@ if (window.innerWidth <= 400) {
             smallSearch.style.transform = 'translateY(-3rem)';
 
         
-    }
+    
     }
    
 }
@@ -2801,7 +3245,7 @@ $(document).ready(function () {
 
         // //category list 2 more - less
  </script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 
 </html>
