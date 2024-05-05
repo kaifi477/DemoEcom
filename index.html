@@ -13,11 +13,11 @@
     <!-- //jquery -->
     <!-- <link rel="icon" href="" type="image/x-icon"> -->
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- //font awesome -->
 
     <link rel="stylesheet" href="http://www.jsdelivr.com/#!particles.js">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"> -->
 
@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
         <header class="">
             <div class="row alert">
                 <img src="./banner full device.webp" alt="" class="banner1">
@@ -324,7 +325,7 @@
                     <li><a href="">Home</a></li>
                     <li class="flash-sale-link"><a href="">Flash Sale</a></li>
                     <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
-                    <li><a href="">All brands</a></li>
+                    <li><a href=""class="all-brands-link">All brands</a></li>
                     <!-- <li><a href="">All Categories</li> -->
                     <li><a href="">All categories</a>
                     <li><a href="">All sellers</a></li>
@@ -418,9 +419,9 @@
                                 <ul>
                                     <li><a href="">Home</a></li>
                                     <li class="active flash-sale-link"><a href="#">Flash Sale</a></li>
-                                    <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
-                                    <li><a href="">All brands</a></li>
-                                    <li><a href="">All categories</a></li>
+                                    <li class="blog-link"><a href="" class="blog-link">Blogs</a></li>
+                                    <li><a href="" class="all-brands-link">All brands</a></li>
+                                    <li><a href="" class="All-categories2-see-all">All categories</a></li>
                                     <li><a href="">All sellers</a></li>
                                     <li><a href="">Coupons</a></li>
                                     <li><a href="">Today deals</a></li>
@@ -428,6 +429,7 @@
                                 <span class="right-scroll"><img src="./expand_less_white.svg" alt=""></span>
                             </div>
                         </div>
+                        
 
                         <div class="col-md-2 store ">
                             <div>
@@ -462,16 +464,38 @@
                             <div>
                                 (0 items)
                             </div>
+                            <div class="cart">
+                                <div>
+                                    <img src="./face-frown-regular.svg" alt="">
+                                </div>
+                                <div>
+                                    <h6>Your Cart is Empty !</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                  
+                    <script>
+                        $(document).ready(function() {
+                            $('.store').on('click', function() {
+                                // Toggle the display of the .cart element
+                                $('.cart').css('display', function(_, currentValue) {
+                                    // Toggle between 'flex' and 'none' based on the current display value
+                                    return currentValue === 'none' ? 'flex' : 'none';
+                                });
+                            });
+                        });
+                    </script>
+                    
+
                     <div class=" menu-list d-none d-md-block d-xl-none">
                         <div class="list">
                             <ul>
                                 <li><a href="">Home</a></li>
                                 <li class="active flash-sale-link"><a href="#">Flash Sale</a></li>
                                 <li class="blog-link"><a href=""class="blog-link">Blogs</a></li>
-                                <li><a href="">All brands</a></li>
-                                <li><a href="">All categories</a></li>
+                                <li><a href=""class="all-brands-link">All brands</a></li>
+                                <li><a href="" class="All-categories2-see-all">All categories</a></li>
                                 <li><a href="">All sellers</a></li>
                                 <li><a href="">Coupons</a></li>
                                 <li><a href="">Today deals</a></li>
@@ -480,7 +504,7 @@
                     </div>
                 </div>
             </div>
-            
+              
 
             <!-- login function-->
 
@@ -575,7 +599,7 @@
                         <div class="row mt-3">
                             <p class="have-account">Do you have an account</p>
                         </div>
-                        <div class="row register-link">
+                        <div class="row register-link registration">
                             <a href="">Register Now</a>
                         </div>
                     </div>
@@ -1155,7 +1179,7 @@
             <!-- All categories 2 -->
             <div class="categories container All-categories2">
                 <div class="my-5 d-flex justify-content-between  justify-content-between align-items-center">
-                    <h3 class="fw-bold ">All Categories</h3>
+                    <h3 class="fw-bold All-categories2-see-all">All Categories</h3>
                     <ul class="d-flex">
                         <li><a href="">Home </a></li>
                         <li><strong>"All Category"</strong></li>
@@ -1823,15 +1847,15 @@
             
 
         </div></div>
+        
 
                 <!-- //All categories 2 -->
-
                 <!-- Menu -->
                 <div  class="particles-js" id="particles-js">
                     <!-- <canvas class="particles-js-canvas" width="1129" height="1089" style="width: 100%; height: 100%;"></canvas> -->
             </div>
                 <div class="menu  h-100 w-100" >
-                <div class="flash-sale">
+                <div class="flash-sale ">
                     <!-- <div  class="particles-js1" id="particles-js"></div> -->
                     <div class="container ">
                         
@@ -2266,7 +2290,7 @@
                             <div class="recent-posts d-xl-block d-flex">
                             <div class="row recent-post-card ">
                                 <div class="recent-post-card-img col-4">
-                                <img src="./blog1.webp" alt=""></div>
+                                <img src="./1.webp" alt=""></div>
                                 <div class="recent-post-card-info col">
                                     <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
                                     <div class="card-date">Sept 13, 2023</div>
@@ -2277,7 +2301,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog4.webp" alt=""></div>
+                                <img src="./4.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>Effective Self Defense Tips for Women</h6>
                                     <div class="card-date">Sept 13, 2023</div>
@@ -2288,7 +2312,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog7.webp" alt=""></div>
+                                <img src="./7.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>What’s Trending This Winter Season?</h6>
                                     <div class="card-date">Sept 11, 2023</div>
@@ -2299,7 +2323,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog2.webp" alt=""></div>
+                                <img src="./2.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>Stay fashionably chill</h6>
                                     <div class="card-date">Sept 12, 2023</div>
@@ -2310,7 +2334,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog5.webp" alt=""></div>
+                                <img src="./5.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>YouTube for E-Commerce</h6>
                                     <div class="card-date">Sept 12, 2023</div>
@@ -2321,7 +2345,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog8.webp" alt=""></div>
+                                <img src="./8.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>Get more with our 10th Anniversary sale guide!</h6>
                                     <div class="card-date">Sept 11, 2023</div>
@@ -2332,7 +2356,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog3.webp" alt=""></div>
+                                <img src="./3.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
                                     <div class="card-date">Sept 12, 2023</div>
@@ -2343,7 +2367,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog6.webp" alt=""></div>
+                                <img src="./6.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>3 must-buy travel items for new parents</h6>
                                     <div class="card-date">Sept 12, 2023</div>
@@ -2354,7 +2378,7 @@
                             </div>
                             <div class="row recent-post-card d-flex">
                                 <div class="col-4 recent-post-card-img">
-                                <img src="./blog9.webp" alt=""></div>
+                                <img src="./9.webp" alt=""></div>
                                 <div class="col recent-post-card-info">
                                     <h6>8 smart home devices for a cooler, more intelligent living space</h6>
                                     <div class="card-date">Sept 10, 2023</div>
@@ -2381,9 +2405,9 @@
 
                 </div>
                 <div class="blog-cards d-flex">
-                    <div class="card border">
+                    <div class="card border"data-name="man fashion">
                         <div class="card-img">
-                            <img src="./blog1.webp" alt="">
+                            <img src="./1.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2394,13 +2418,13 @@
                             </p></div>
                             <div class="card-date">Sept 13, 2023</div>
                             <div class="card-title">Man Fashion</div>
-                            <div class="card-read-more"><a href="">Read Full Blog</a></div>
+                            <div class="card-read-more"><a href="" data-target-image="image1">Read Full Blog</a></div>
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border" data-name="online sell">
                         <div class="card-img">
-                            <img src="./blog2.webp" alt="">
+                            <img src="./2.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2410,14 +2434,14 @@
                                 Summer is over and Milan Fashion Week is just around the corner. It’s time to check out what your favorite influencers are wearing on the runway and out on the streets.
                             </p></div>
                             <div class="card-date">Sept 12, 2023</div>
-                            <div class="card-title">Style</div>
+                            <div class="card-title">Online sell</div>
                             <div class="card-read-more"><a href="">Read Full Blog</a></div>
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="style">
                         <div class="card-img">
-                            <img src="./blog3.webp" alt="">
+                            <img src="./3.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2432,9 +2456,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="life hacks">
                         <div class="card-img">
-                            <img src="./blog4.webp" alt="">
+                            <img src="./4.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2450,9 +2474,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="marketing and Promotion">
                         <div class="card-img">
-                            <img src="./blog5.webp" alt="">
+                            <img src="./5.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2467,9 +2491,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border" data-name="family">
                         <div class="card-img">
-                            <img src="./blog6.webp" alt="">
+                            <img src="./6.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2484,9 +2508,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="fashion">
                         <div class="card-img">
-                            <img src="./blog7.webp" alt="">
+                            <img src="./7.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2501,9 +2525,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="on trend">
                         <div class="card-img">
-                            <img src="./blog8.webp" alt="">
+                            <img src="./8.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2520,9 +2544,9 @@
                         </div>
 
                     </div>
-                    <div class="card border">
+                    <div class="card border"data-name="home">
                         <div class="card-img">
-                            <img src="./blog9.webp" alt="">
+                            <img src="./9.webp" alt="">
                         </div>
                         <div class="card-info">
                             <div class="head">
@@ -2544,28 +2568,1767 @@
                     </div>
                 </div>
             </div></div>
-            <script>
-                $(document).ready(function(){
+
+            <!-- all brands -->
+            <div class="all-brands ">
+            <div class="container ">
+                <div class="my-5 d-flex justify-content-between align-items-center info">
+                    <h4 class="fw-bolder text-center">All brands</h4>
+                    <ul class="d-flex align-items-center">
+                        <li><a href="" class="mx-2">Home / </a></li>
+                <li class="fw-bold">"All brands"</li>
+            </ul>
+        </div>
+        <div class="row row-cols-xl-6 row-cols-lg-4 row-cols-md-4 row-cols-3">
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./ford.WEBP" class="">
+                <p class="">Ford</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./chevrolet.WEBP">
+                <p class="">Chevrolet</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./audi.WEBP">
+                <p class="">Audi</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./hyundai.WEBP">
+                <p class="">Hyundai</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./nissan.WEBP">
+                <p class="">Nissan</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./bmw.WEBP">
+                <p class="">BMW</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./mercedes benz.webp">
+                <p class="">Mercedes-Benz</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./toyota.webp">
+                <p class="">Toyota</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./suzuki.webp">
+                <p class="">Suzuki</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./mitsubishi.webp">
+                <p class="">Mitsubishi</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./honda.webp">
+                <p class="">Honda</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./volvo.webp">
+                <p class="">Volvo</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./yamaha.webp">
+                <p class="">Yamaha</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./brighton.webp">
+                <p class="">Brighton</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./tanishq.webp">
+                <p class="">Tanishq</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./victoria's secret.webp">
+                <p class="">Victoria's-Secret</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./dior.webp">
+                <p class="">Dior</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./bucketfeet.webp">
+                <p class="">Bucketfeet</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./jlo.webp">
+                <p class="">JLO</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./en'or.webp">
+                <p class="">En'or</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./rolex.webp">
+                <p class="">Rolex</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./polo.webp">
+                <p class="">Polo</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./aigner.webp">
+                <p class="">Aigner</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./omega.webp">
+                <p class="">Omega</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./axe.webp">
+                <p class="">Axe</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./adidas.webp">
+                <p class="">Adidas</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./nike.webp">
+                <p class="">Nike</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./puma.webp">
+                <p class="">Puma</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./reebok.webp">
+                <p class="">Reebok</p>
+            </a>
+        </div>
+        <div class="col all-brands-card">
+            <a href="" class="">
+                <img src="./samsung.webp">
+                <p class="">Samsung</p>
+            </a>
+        </div>
+    </div>
+            </div></div></div>
+            <!-- //all brands -->
+
+            <div class="blog-card-readmore">
+            <div class="container">
+                <!-- blog card details 1 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">T-Shirts Every Man Needs in His Wardrobe</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 13, 2023</div>
+                            <div class="card-title mt-1">Man Fashion</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./1.webp">
+                    </div>
+                    <div class="text my-3">
+                        <p>Let’s see what these shirts are, shall we?</p>
+                    </div>
+                    <div class="img2">
+                        <img src="./one1.jpg" alt="">
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            Let’s start off with White is a color that suits everyone, but it can be slightly tricky to pick the right one, and style it correctly too. <br><br>
+                            
+                            If you think that plain white shirts arent meant for you, then we suggest you go for patterned ones perhaps stripes or checks. <br> <br>
+                            
+Then pair it with blue or black jeans and you’re all set to rock your white polo shirt! <br> <br>
+
+Speaking of colored t-shirts, are always a safe bet too. When in doubt, go for blue! Thats our motto, simply because you cant go wrong with blue color when its men. <br> <br>
+</p>
+</div>
+<div class="img3">
+    <img src="./one2.jpg" alt="">
+</div>
+<div class="text my-3">
+    <p>Whether you want to go for a button-down shirt, a long sleeve t-shirts or a short-sleeve t-shirts, blue or navy blue t-shirts would never disappoint. <br><br>
+
+        So dont have any second thoughts about this were giving you golden advice and nothing else! <br><br>
+        
+        Now lets talk about other solid color jerseys. Plain casual t-shirts in solid colors can be your go-to look. You could, however, switch between full sleeves and half sleeves. And of course, there are always many colors you can switch between for example, <span>maroon</span>  and <span>army green</span> are two very different colors that each give a very different look!</p>
+</div>
+<div class="blog-details-img4">
+    <img src="./one3.jpg" alt=""class="">
+</div>
+<div class="text my-3">
+    <p>Again, t-shirts go best with jeans but, wait! There are always ways to spice up the look. You could wrap a scarf around the neck, put on a stylish cap (or even hat) and further accessorize it with sunglasses. <br><br>
+
+        As long as you know what to wear with what, youre go</p>
+</div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 1 -->
+            <!-- blog card details 2 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 13, 2023</div>
+                            <div class="card-title mt-1">Online sell</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./2.webp">
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            There are currently <span>7.1 million online retailers</span>  in the world with 1.8 million in the United States alone. And more are opening all the time. <br><br>
+
+                            In the midst of all this opportunity, how do you know if opening an online store is something you should do? You’ve heard of others who succeeded but how do you know if you’ll also succeed? <br><br>
+                            
+                            Maybe youve been on the verge of starting your own business, but youve allowed fear to hold you back. Or, maybe you think you don’t have the qualifications to make it as an online entrepreneur. <br><br>
+                            
+                            The only way to know for sure is to do it yourself. And the fact that you know of others who succeeded means the odds are in your favor of making it, too. <br><br>
+                            
+                            In this article, well take all the guesswork out of starting your own business. We’ll also provide you with all the tips and information you need to ensure you are able to operate a successful online store.
+                            
+                            
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h4>It’s Never Been Easier to Start an Online Store</h4>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            If you’ve ever dreamed of starting an online store, there’s no better time to begin than right now. According to <span>emarketer</span>  US consumers will spend $709.78 billion on <span>ecommerce</span>  in 2020, which represents an increase of 18.0%. And these are the estimated numbers in spite of everything that’s going on in the world. <br><br>
+
+                            But there are more reasons you shouldnt wait. Well talk about them more below.
+                            
+                            
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h5>1. More resources than ever.</h5>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            There are a ton of resources available to point you in the right direction and answer any questions you may have. Youtube is an especially helpful resource where you can find videos of people showing you step by step how to open up an online store and stock it full of products. <br><br>
+
+                            Another helpful resource are Facebook groups. Here you can connect with other like-minded, ecommerce website owners and gain helpful, expert advice.
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h5>2. Endless amount of online store builders and features.</h5>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            Online <span>ecommerce platforms</span>  are beginner-friendly and easy to use. They take the guesswork out of designing an online store by providing a selection of pre-made, ready-to-use templates. Another great thing about these templates is that they’re easily accessible, giving you the freedom and functionality to make changes to your site whenever you see fit.
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h4>3 Signs Youre Ready to Start Your Own Ecommerce Store</h4>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            Online <span>ecommerce platforms</span>  are beginner-friendly and easy to use. They take the guesswork out of designing an online store by providing a selection of pre-made, ready-to-use templates. Another great thing about these templates is that they’re easily accessible, giving you the freedom and functionality to make changes to your site whenever you see fit.
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h4>1. You are interested in running an online business.</h4>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            Are you intrigued by the thought of running an online operation? Maybe youve already begun researching the idea or asked the opinion of a few friends. If this is the case, starting an online business may be something youre ready for.
+                        </p>
+                    </div>
+                    <div class=" text-heading">
+                        <h4>2. You want to diversify and add another revenue stream.h4>
+                    </div>
+                    <div class="text my-3">
+                        <p>
+                            Maybe you’re somebody whos only looking to create an additional stream of income. If this is the case, an online store might be the perfect choice for you. <br><br>
+
+                            Online stores allow you the flexibility to operate them full-time or on a part-time basis. The decision on how to run yours depends entirely on you and your financial goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 2 -->
+            <!-- blog card details 3 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./3.webp">
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="w-50">
+                        <img src="" alt="">
+                    </div>
+                    <div class="w-50">
+                        <h4>Throw some shade</h4>
+                        <p class="mt-4">Shades are a must for any jet-setter. Take a pair on road trips to shield your eyes from the glaring sun or use it as a clever cover up for when youve partied too hard the night before. This pair is perfect for putting on a poker face while maintaining a hint of mystery. But do watch out, someone might take you for an undercover Bond girl!</p>
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="w-50">
+                        <img src="" alt="">
+                    </div>
+                    <div class="w-50">
+                        <h4>Stay in bloom</h4>
+                        <p class="mt-4">You can never go wrong with a bold floral ensemble. The print is infinitely instagrammable because it works to liven up most backgrounds. Style this red, hot top it with jean shorts and a straw hat or with a glossy, pleated skirt--- we guarantee you’ll find so many occasions to whip this out of your closet!</p>
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="w-50">
+                        <img src="" alt="">
+                    </div>
+                    <div class="w-50">
+                        <h4>All white all right</h4>
+                        <p class="mt-4">Nothing says easy and crisp more than all-white ensemble. It looks just right on a spontaneous boat trip, a hot date downtown or for a Sirtaki dance in the alleys of an old Greek town. You cant go wrong with this white number, just make sure you keep it looking pristine whatever you decide to do!</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 3 -->
+            <!-- blog card details 4 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./4.webp">
+                    </div>
+                   <div class="text-heading mt-4 ">
+                    <h3 class="fw-bold">Self Defense Training</h3>
+                   </div>
+                   <div class="text ">
+                    <p>One of the first things that every female should know are some basic self defense moves. Self defense training can give you the confidence to try and overpower if, God forbid, youre ever assaulted. <br><br>
+
+                        You should start with memorizing the vulnerable spots:</p>
+                   </div>
+                   <div class="img1">
+                    <img src="./four1.jpg">
+                </div>
+                <div class="text">
+                    <p>Once you have memorized these sensitive spots, you can try and focus your strength at them to overpower the attacker. The most effective and simple self-defense techniques are:<br><br>
+<ul class="d-block">
+<li><strong>Grab the wrist:</strong>  Grab the ring finger and pinky finger with one hand, and use the other hand to grab the middle and index finger. Then bend the wrist forward and this will make any giant person squirm in pain!<br></li>
+<li><strong>Hit between collar bones or into Adam’s apple:</strong> Use your fingers or fist to do this and youll be able to disorient the attacker. This should give you enough time to escape before they come back to sense.<br></li>
+<li><strong>Aim for the groin:</strong> This one is obvious. Itll paralyze the attacker, giving you enough time to run.</li>
+<li><strong>Hit the Nose:</strong> If you were attacked from the front, use your fists to create some room in between and then hit the nose of the attacker with your forehead. Then using your knee, hit him in the groin!</p><br></li>
+                </ul>
+            </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 4 -->
+            <!-- blog card details 5 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./5.webp">
+                    </div>
+                  <div class="text mt-4">
+                    <p>YouTube is an excellent platform for promoting your e-commerce business, but many stores haven’t capitalized on what it has to offer. <br><br>
+
+                        At some point, you’ve probably contemplated creating videos to market your e-commerce business. But issues like affordability and lack of time have gotten in the way. That’s how it is for most businesses, but the ones that invest their efforts into video marketing often separate themselves from the pack as far as having a memorable brand that drives engagement.<br><br>
+                        
+                        In this article, well dive into why YouTube is a worthwhile platform for e-commerce marketing, along with some strategies to boost sales by leveraging this super popular video social media channel.<br><br>
+                        
+                        But first, lets get down to some basics.<br><br>
+                        
+                        These two content formats complement each other well. Embedding videos within your blog posts can dramatically increase engagement through social shares, and also boost the average time spent on your page.<br><br>
+                        
+                        This will lead to an overall increase in your store’s rankings on Google.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 5 -->
+            <!-- blog card details 6 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./6.webp">
+                    </div>
+                  <div class="heading mt-5">
+                    <h4>1. Strap ‘em in!</h4>
+                  </div>
+                  <div class="mt-4"><p>Whether it's a day outing or a long family holiday, ample preparation always pays off. Besides doing ample research on the transportation, hotels, destinations, and packing list, getting the right travel gear is also a priority. But fear not, new moms and dads, these useful travel accessories will help you and your child relax a little more, ensuring better quality time for the whole family.</p></div>
+                <div class="row d-flex">
+                    <div class="col"><img src="" alt=""></div>
+                    <div class="col"></div>
+                </div>
+                
+                <div class="d-flex">
+                    <div class="col">
+                        <div class="heading mt-5">
+                            <h4>3. All packed & ready to go</h4>
+                          </div>
+                          <div class="mt-4"><p class="">As every parent knows, finding THE bag is key. The right baby bag will have plenty of well-placed compartments where you can store everything from daily essentials to toys. What you need for travel may be a little different than what you pack day-to-day, so make sure to create a checklist in advance with everything you'll need. Between a great bag and a pre-booked bassinet (a service some airlines offer), you should be good to go. <br><br>
+
+                            PRO TIP: Place a simple check list by the main door, and always do a final check before you head out to make sure you have everything you need!
+                            /p></div>
+                    </div>
+                    <div class="col"><img src="" alt=""></div>
+                </div>
+
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 6 -->
+            <!-- blog card details 7 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./7.webp">
+                    </div>
+                    <div class="text mt-4">
+                        <p><i> Whats more flattering than a vibrant sweater shirt paired with light blue jeans and some boots? It’s the perfect winter combo that would always turn some heads!</i></p>
+                    </div>
+                    <div class="blog-seven-details-img2">
+                        <img src="./seven1.jpg" alt="">
+                    </div>
+                    <div class="mt-3 seven-blog-bg">
+                    </div>
+                    <div class="img3">
+                        <img src="./seven2.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="img4 ">
+                        <img src="./seven3.png" alt="">
+                    </div>
+                    <div class="img5">
+                        <img src="./seven4.jpg" alt="" class="w-100">
+                    </div>
+
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 7 -->
+            <!-- blog card details 8 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./8.webp">
+                    </div>
+                   <div class="heading mt-4">
+                    <h2 class="fw-bold">Browse sale items & add to cart</h2>
+                    <p class="mt-5">We meant it when we said it was going to be an epic party. Just look at the number of items going on sale during our 10th birhtday! See if your favorite brands are on discount, discover new items, or add that one thing youve lusted over for so long to cart. <br><br>
+ 
+You can’t buy these items on discount just yet, but you can add them to the cart to earn some coins (ends Mar 26 PT). Once youve collected enough coins, they can be exchanged into coupons. <br><br>
+ 
+Can’t decide what to browse? Let these curated pages guide you better. <br><br>
+<ul class="d-block float-start">
+<li>Bestsellers  Top-selling must-haves</li>
+<li>Big Clearance Discounts – Value for money buys</li>
+<li>New Arrivals – Latest items</li>
+<li>Must-Haves– Popular & top-rated items</li>
+<li>Top Selection  Outstanding quality & service</li>
+</ul></p>
+                   </div>
+                  
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 8 -->
+            <!-- blog card details 9 -->
+            <div class="row blog-card-details d-none">
+                <div class="col-12 col-xl-8 col-lg-8 p-4">
+                    <div class="head">
+                        <h4 class="fw-bold">How to Start an Online Store</h4>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-6">
+                            <div class="card-date">Sept 12, 2023</div>
+                            <div class="card-title mt-1">style</div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li><img src="./envelope-square-6.svg" alt=""></li>
+                                <li><img src="./twitter-square-2.svg" alt=""></li>
+                                <li><img src="./facebook-145.svg" alt=""></li>
+                                <li><img src="./linkedin-104.svg" alt=""></li>
+                                <li><img src="./whatsapp-square.svg" alt=""></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="img1">
+                        <img src="./9.webp">
+                    </div>
+                  <div class=" mt-3">
+                    <p>Before you jump in, check out this comprehensive guide. Theres gonna be lots of fun & games involved, and you don’t want to miss a thing! You can start engaging in money-saving activities from Mar 16 PT onwards and start shopping the sale between Mar 27-31 PT. <br><br>
+ 
+                        Here’s everything you need to know to get the most out of our once-every-decade epic birthday bash! <br><br>
+                         
+                        (Stay tuned as we update this article with more sale hacks in the upcoming days.)</p>
+                  </div>
+                  <div class="heading">
+                      <h4 class="fw-bold">
+                          Mar 18-31 PT
+                        </h4>
+                        <h2 class="fw-bold mt-4">
+                            Get your personal Time Capsule</h2>
+                        </div>
+                        <div class=" mt-3">
+                          <p>Come and discover the AliExpress Time Capsule, an interactive compilation of all your fun AliExpress shopping stats! Do you remember your first order? How about how frequently you shop here? Go back in time and you’ll be surprised at what you might find. <br><br>
+                            Plus, you get a special birthday coupon at the end of this memory lane too. These coupons are given on a first come first served basis, so go try out the AliExpress Time Capsule before they run out!</p>
+                        </div>
+                        <div class="heading">
+                            <h4 class="fw-bold">
+                                Mar 20-25 PT
+                              </h4>
+                              <h2 class="fw-bold mt-4">
+                                Play Funbox & win a share of US $500,000 in coupons
+                            </h2>
+                              </div>
+                              <div class="row mt-5">
+                                  <div class="col"></div>
+                                  <div class="col">Funbox, our virtual board game, is back by popular demand! Its super easy to play and you’re sure to win a little something. (Warning: potentially addictive too.) All you have to do is roll a dice to move forward on the board, and you can earn more chances to advance in the game by visiting the stores you see within the game. <br><br>
+
+                                    You can earn extra AliExpress Coupons by participating in quirky mini-games peppered throughout the journey, and each player who completes the board can also win a share of the final US $500,000 prize in AliExpress Coupons. <br><br>
+                                    
+                                    Be sure to use any coupons won during this game for the 10th Anniversary sale, as theyre only valid from Mar 27-31 PT.</div>
+                                </div>
+                                <div class="heading mt-5">
+                                    <h4 class="fw-bold">
+                                        Mar 20-26 PT </h4>
+                                      <h2 class="fw-bold mt-4">
+                                        Collect coupons to use during the sale                                    </h2>
+                                      </div>
+                                      <div class=" mt-3">
+                                        <p>We’re giving out tons of coupons for our birthday! You can find them at various spots around among the sale pages, and all youve got to do is click and collect them. Heres an easy one: go get a Select Coupon on our main 10th Anniversary page! Then head to our Coupon Center to get another Select Coupon, and collect Store Coupons from your favorite brands. <br><br>
+ 
+                                            New Select Coupons are available each day, so remember to visit daily to get them all! Remember to use them to shop for our 10th Anniversary celebration (Mar 27-31 PT) as they expire after. <br><br>
+                                             
+                                            Another way to shop smarter is by only browsing items that can be discounted with Select Coupons. You can find these items at Shop With Select Coupons, or by using our search filter for Select Coupon and 10th Anniversary items.</p>
+                                      </div>
+
+                </div>
+                <div class="col-xl-4 col-lg-4 col-12">
+                <div class=" border p-3 mt-4">
+                    <div class="head mb-3 ">
+                        <h6 class="fw-bold">Recent Posts</h6>
+                    </div>
+                    <div class="recent-posts d-xl-block d-flex">
+                        <div class="row recent-post-card ">
+                            <div class="recent-post-card-img col-4">
+                            <img src="./1.webp" alt=""></div>
+                            <div class="recent-post-card-info col">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./4.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Effective Self Defense Tips for Women</h6>
+                                <div class="card-date">Sept 13, 2023</div>
+                                <div class="card-title">Life Hacks</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./7.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>What’s Trending This Winter Season?</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./2.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Stay fashionably chill</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Style</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./5.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>YouTube for E-Commerce</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Marketing and Promotion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./8.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>Get more with our 10th Anniversary sale guide!</h6>
+                                <div class="card-date">Sept 11, 2023</div>
+                                <div class="card-title">On Trend</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./3.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>T-Shirts Every Man Needs in His Wardrobe</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Man Fashion</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./6.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>3 must-buy travel items for new parents</h6>
+                                <div class="card-date">Sept 12, 2023</div>
+                                <div class="card-title">Family</div>
+                            </div>
+
+
+                        </div>
+                        <div class="row recent-post-card d-flex">
+                            <div class="col-4 recent-post-card-img">
+                            <img src="./9.webp" alt=""></div>
+                            <div class="col recent-post-card-info">
+                                <h6>8 smart home devices for a cooler, more intelligent living space</h6>
+                                <div class="card-date">Sept 10, 2023</div>
+                                <div class="card-title">Home</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <!-- //blog card details 9 -->
+        </div></div>
+<script>
+$(document).ready(function(){
     $('.flash-sale-link').click(function(){
+        // Show flash sale and hide other elements
         $('.flash-sale').css('display', 'block');
-        $('#login-modal-open').css('display','none')
-    $('#registration-modal-open').css('display','none')
-    $('.All-categories2').css('display','none')
-    $('.blog').css('display','none')
+        $('#login-modal-open').css('display','none');
+        $('#registration-modal-open').css('display','none');
+        $('.All-categories2').css('display','none');
+        $('.blog').css('display','none');
+        $('.all-brands').css('display', 'flex');
+        $('.all-brands').css('display', 'none');
+
     });
 });
-$(document).ready(function(){
-$('.blog-link').click(function(e){
-    e.preventDefault()
-    $('.blog').css('display', 'block');
-    $('.flash-sale').css('display', 'none');
-    $('#login-modal-open').css('display','none')
-    $('.All-categories2').css('display','none')
-$('#registration-modal-open').css('display','none')
-});
-})
 
-            </script>
+$(document).ready(function(){
+    $('.blog-link').click(function(e){
+        e.preventDefault();
+        // Show blog and hide other elements
+        $('.blog').css('display', 'block');
+        $('.flash-sale').css('display', 'none');
+        $('#login-modal-open').css('display','none');
+        $('#registration-modal-open').css('display','none');
+        $('.All-categories2').css('display','none');
+        $('.all-brands').css('display', 'none');
+
+    });
+});
+
+$(document).ready(function(){
+    $('.all-brands-link').click(function(e){
+        e.preventDefault();
+        // Show all brands and hide other elements
+        $('.blog').css('display', 'none');
+        $('.flash-sale').css('display', 'none');
+        $('.all-brands').css('display', 'flex');
+        $('#login-modal-open').css('display','none');
+        $('#registration-modal-open').css('display','none');
+        $('.All-categories2').css('display','none');
+    });
+});
+
+$(document).ready(function() {
+    // Filtering blog categories
+    const filter_input = $(".blog-category input");
+    const filter_cards = $(".blog-cards .card");
+
+    filter_input.on("change", function() {
+        const $this = $(this);
+
+        if ($this.is(":checked")) {
+            // Check if the input is checked
+            filter_input.removeClass('active');
+            $this.addClass('active');
+
+            const selectedCategory = $this.data("name"); // Get the selected category
+            filter_cards.addClass('hide'); // Hide all cards
+
+            if (selectedCategory === "all") {
+                filter_cards.removeClass('hide'); // Show all cards
+            } else {
+                filter_cards.filter(function() {
+                    return $(this).data("name") === selectedCategory;
+                }).removeClass('hide'); // Show cards of the selected category
+            }
+
+            const selectedData = $this.data("data"); // Get the data associated with the selected category
+            $this.data("display", selectedData); // Set a "data-display" attribute with the selected data
+        } else {
+            $this.removeClass('active');
+            filter_cards.removeClass('hide'); // Remove 'hide' class from all cards when input is unchecked
+            $this.removeData("display"); // Remove the "data-display" attribute when unchecked
+        }
+    });
+});
+</script>
+
             <div class="blog">
                 <div class="container">
                 </div>
@@ -3061,7 +4824,7 @@ $(".smallsearch span").click(function(){
                     $('#registration-modal-open').css('display','none');
                     $('.All-categories2').css('display','none');
                     $('.flash-sale').css('display','none');
-
+                    $('.All-categories2').css('display','none');
                     
                 });
             });
@@ -3071,17 +4834,10 @@ $(".smallsearch span").click(function(){
                     e.preventDefault();
                     $('#registration-modal-open').css('display','flex');
                     $('#login-modal-open').css('display','none');
-                    
                     $('.flash-sale').css('display','none');
-                }); 
-            });
-        $(document).ready(function(){
-                $('.register-link').click(function(e){
-                    e.preventDefault();
-                    $('#registration-modal-open').css('display','flex');
-                    $('#login-modal-open').css('display','none');
-                    $('.flash-sale').css('display','none');
-
+                    $('.blog').css('display','none');
+                    $('.all-brands').css('display','none');
+                    $('.All-categories2').css('display','none');
                 }); 
             });
         // //login modal
@@ -3239,13 +4995,16 @@ $(document).ready(function () {
     $('.All-categories2').show()
     $('#login-modal-open').css('display','none')
     $('#registration-modal-open').css('display','none')
+    $('.flash-sale').css('display','none')
+    $('.all-brands').css('display','none')
+    $('.blog').css('display','none')
   })
 });
 
 
         // //category list 2 more - less
  </script>
-    <script src="script1.js"></script>
+    <script src="script2.js"></script>
 </body>
 
 </html>
